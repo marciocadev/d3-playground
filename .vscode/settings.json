@@ -1,0 +1,26 @@
+{
+  "emojisense.unicodeCompletionsEnabled": true,
+  "emojisense.emojiDecoratorsEnabled": true,
+  "emojisense.showOnColon": true,
+  "emojisense.markupCompletionsEnabled": true,
+  "emojisense.languages": {
+    "typescript": true,
+    "typescriptreact": true,
+    "markdown": true,
+    "plaintext": {
+        "markupCompletionsEnabled": false,
+        "emojiDecoratorsEnabled": false
+    },
+    "scminput": true,
+    "git-commit": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  }
+}

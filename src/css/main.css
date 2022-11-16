@@ -4,29 +4,29 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.tick line {
+.tick {
+  & line {
     stroke: #C0C0BB;
   }
 
-.tick text {
+  & text {
     fill: #635F5D;
-  }
+  } 
+}
 
 .marks {
   fill: #137B80;
-}
-
-.marks path {
+  & path {
     fill: none;
     stroke: #137B80;
     stroke-width: 4;
     stroke-linejoin: round;
     stroke-linecap: round;
   }
-
-.marks circle {
+  & circle {
     fill: #137B80;
   }
+}
 
 .axis-label {
   font-size: 2.5em;

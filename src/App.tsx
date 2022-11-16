@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { Chart } from "./components/Chart2";
+import { BarChartExample } from "./components/graphs/BarChartExample/BarCharexample";
+import { LoadData } from "./components/LoadData/LoadData";
+import { MouseFolllows } from "./components/MouseFollows/MouseFollows";
+import { ScatterPlotExample } from "./components/graphs/ScatterPlotExample/ScatterPlotExample";
+import { SmileFace } from "./components/SmileFace/SmileFace";
+import { VizualizingData } from "./components/VizualizingData/VizualizingData";
+import { ScatterPlotTimeExample } from "./components/graphs/ScatterPlotTimeExample/ScatterPlotTimeExample";
+import { LineChartExample } from "./components/graphs/LineChartExample/LineChartExample";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <SmileFace />
+    <MouseFolllows />
+    <LoadData />
+    <VizualizingData />
+    <BarChartExample />
+    <ScatterPlotExample />
+    <ScatterPlotTimeExample />
+    <LineChartExample />
+    </>
   );
 }
 

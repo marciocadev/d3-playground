@@ -6,21 +6,30 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "d3": "^7.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
+    "typescript": "^4.8.4",
+    "vega": "^5.22.1",
+    "vega-lite": "^5.6.0",
+    "vega-lite-api": "^5.0.0",
+    "vega-tooltip": "^0.28.0",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postcss:build": "postcss src/css/main.css -o src/index.css",
+    "postcss:watch": "postcss src/css/main.css -o src/index.css -w",
+    "start": "npm-run-all -p postcss:watch start:react",
+    "start:react": "react-scripts start",
+    "build": "npm-run-all -p postcss:build build:react",
+    "build:react": "react-scripts build",
+    "test:react": "react-scripts test",
+    "eject:react": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +48,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "@types/vega": "^3.2.0",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-nested": "^6.0.0"
   }
 }
