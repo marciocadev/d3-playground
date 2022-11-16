@@ -7,18 +7,20 @@ import { SmileFace } from "./components/SmileFace/SmileFace";
 import { VizualizingData } from "./components/VizualizingData/VizualizingData";
 import { ScatterPlotTimeExample } from "./components/graphs/ScatterPlotTimeExample/ScatterPlotTimeExample";
 import { LineChartExample } from "./components/graphs/LineChartExample/LineChartExample";
+import { WorldMap } from "./components/graphs/WorldMap/WorldMap";
 
 function App() {
   return (
     <>
-    <SmileFace />
+    {/* <SmileFace />
     <MouseFolllows />
     <LoadData />
     <VizualizingData />
     <BarChartExample />
     <ScatterPlotExample />
     <ScatterPlotTimeExample />
-    <LineChartExample />
+    <LineChartExample /> */}
+    <WorldMap />
     </>
   );
 }

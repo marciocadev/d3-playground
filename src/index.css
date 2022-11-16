@@ -32,3 +32,22 @@ body {
   font-size: 2.5em;
   fill: #635F5D;
 }
+
+.world-map .land {
+    fill: #137B80;
+    stroke: #C0C0BB;
+  }
+
+.world-map .interiors {
+    fill: none;
+    stroke: #339498;
+  }
+
+.world-map .graticule {
+    fill: none;
+    stroke: #DADADA;
+  }
+
+.world-map .sphere {
+    fill: #ECECEC
+  }
