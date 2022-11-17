@@ -1,4 +1,4 @@
-import { ScaleBand } from "d3"
+import { ScaleBand } from 'd3'
 
 interface AxisLeftProps {
   yScale: ScaleBand<string>

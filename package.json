@@ -11,12 +11,13 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "d3": "^7.6.1",
+    "eslint": "^8.0.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "topojson": "^3.0.2",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.3",
     "vega": "^5.22.1",
     "vega-lite": "^5.6.0",
     "vega-lite-api": "^5.0.0",
@@ -31,7 +32,8 @@
     "build": "npm-run-all -p postcss:build build:react",
     "build:react": "react-scripts build",
     "test:react": "react-scripts test",
-    "eject:react": "react-scripts eject"
+    "eject:react": "react-scripts eject",
+    "eslint": "eslint . --ext .js,.ts,.jsx,.tsx --ignore-pattern node_modules/ --fix ."
   },
   "eslintConfig": {
     "extends": [
@@ -57,9 +59,11 @@
     "@types/vega": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
+    "daisyui": "^2.41.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
-    "postcss-nested": "^6.0.0"
+    "postcss-nested": "^6.0.0",
+    "tailwindcss": "^3.2.4"
   }
 }

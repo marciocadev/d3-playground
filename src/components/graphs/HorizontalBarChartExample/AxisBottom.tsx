@@ -1,8 +1,8 @@
-import { ScaleLinear } from "d3"
+import { ScaleLinear } from 'd3'
 
 interface AxisBottomProps {
-  innerHeight: number,
-  xScale: ScaleLinear<number, number, never>,
+  innerHeight: number
+  xScale: ScaleLinear<number, number, never>
   tickFormat: any
 }
 

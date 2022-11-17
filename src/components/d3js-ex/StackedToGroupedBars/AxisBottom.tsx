@@ -5,7 +5,7 @@ interface AxisBottomProps {
 export const AxisBottom = (props: AxisBottomProps) => {
   return (
     <>
-    
+
     </>
   )
 }

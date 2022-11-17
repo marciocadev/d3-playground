@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -11,11 +14,17 @@ body {
 
   & text {
     fill: #635F5D;
-  } 
+  }
+
+  & tspan {
+    font-size: small;
+    fill: #635F5D;
+  }
 }
 
 .marks {
   fill: #137B80;
+
   & path {
     fill: none;
     stroke: #137B80;
@@ -23,6 +32,22 @@ body {
     stroke-linejoin: round;
     stroke-linecap: round;
   }
+
+  & circle {
+    fill: #137B80;
+  }
+}
+
+.marks-color {
+
+  & path {
+    fill: none;
+    stroke: #137B80;
+    stroke-width: 4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
   & circle {
     fill: #137B80;
   }

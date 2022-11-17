@@ -13,21 +13,22 @@ interface MarksProps {
 export const Marks = (props: MarksProps) => {
   return (
     <>
-    {
-      props.data.map(d =>
-        <circle className="marks"
-          cx={props.xScale(props.xValue(d))}
-          cy={props.yScale(props.yValue(d))}
-          r={props.circleRadius}>
+      {
+        props.data.map((d, i) =>
+          <circle className="marks"
+            cx={props.xScale(props.xValue(d))}
+            cy={props.yScale(props.yValue(d))}
+            r={props.circleRadius}
+            key={i}>
             <title>
               (
-                {props.tooltipFormat(props.yValue(d))},
-                {props.tooltipFormat(props.xValue(d))}
+              {props.tooltipFormat(props.yValue(d))},
+              {props.tooltipFormat(props.xValue(d))}
               )
             </title>
-        </circle>
-      )
-    }
+          </circle>
+        )
+      }
     </>
   )
 }

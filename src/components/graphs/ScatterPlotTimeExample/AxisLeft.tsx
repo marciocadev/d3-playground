@@ -1,8 +1,8 @@
-import { ScaleLinear } from "d3"
+import { ScaleLinear } from 'd3'
 
 interface AxisLeftProps {
-  yScale: ScaleLinear<number, number, never>,
-  innerWidth: number,
+  yScale: ScaleLinear<number, number, never>
+  innerWidth: number
   tickOffset: number
 }
 

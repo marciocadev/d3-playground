@@ -1,9 +1,9 @@
-import { ScaleTime } from "d3"
+import { ScaleTime } from 'd3'
 
 interface AxisBottomProps {
-  innerHeight: number,
-  xScale: ScaleTime<number, number, never>,
-  tickFormat: any,
+  innerHeight: number
+  xScale: ScaleTime<number, number, never>
+  tickFormat: any
   tickOffset: number
 }
 
