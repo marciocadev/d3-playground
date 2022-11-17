@@ -4,7 +4,7 @@ import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 import { useData } from "./useData";
 
-export const BarChartExample = () => {
+export const HorizontalBarChartExample = () => {
 
   const url = 'https://gist.githubusercontent.com/curran/0ac4077c7fc6390f5dd33bf5c06cb5ff/raw/605c54080c7a93a417a3cea93fd52e7550e76500/UN_Population_2019.csv';
 
@@ -26,13 +26,12 @@ export const BarChartExample = () => {
     return <pre>Loading...</pre>;
   };
 
-  const xValue = (d: any) => d.Population as (number | undefined);
-  const maxHeight = max(data, xValue);
+  const xValue = (d:any) => d.Population;
   const xScale = scaleLinear()
-    .domain([0, maxHeight === undefined ? 1 : maxHeight])
+    .domain([0, max(data, xValue)])
     .range([0, innerWidth])
 
-  const yValue = (d: any) => (d.Country === undefined) ? '': d.Country
+  const yValue = (d:any) => d.Country;
   const yScale = scaleBand()
     .domain(data.map(yValue))
     .range([0, innerHeight])
@@ -48,9 +47,9 @@ export const BarChartExample = () => {
         { <AxisBottom xScale={xScale} innerHeight={innerHeight} 
           tickFormat={xAxisTickFormat} /> }
         <text textAnchor='middle' className="axis-label"
-          x={innerWidth / 2} y={innerHeight + xAxisLabelOffset} >Population</text>
+          x={innerWidth / 2} y={innerHeight + xAxisLabelOffset}>Population</text>
         { <Marks data={data} xScale={xScale} yScale={yScale}
-          yValue={yValue} xValue={xValue} tooltipFormat={xAxisTickFormat} /> }
+          xValue={xValue} yValue={yValue} tooltipFormat={xAxisTickFormat} /> }
       </g>
     </svg>
   )

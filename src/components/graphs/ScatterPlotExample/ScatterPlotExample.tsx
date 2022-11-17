@@ -41,7 +41,7 @@ export const ScatterPlotExample = () => {
   const yExtent = extent(data, yValue);
   const yScale = scaleLinear()
   .domain(yExtent[0] === undefined ? [0,0] : yExtent)
-  .range([0, innerHeight]);
+  .range([innerHeight, 0]);
 
   const siFormat = format('.2s');
   const xAxisTickFormat = (tickValue: number | { valueOf(): number; }) => siFormat(tickValue).replace('G', 'B');
@@ -70,5 +70,3 @@ export const ScatterPlotExample = () => {
     </svg>
   )
 }
-// y={innerHeight / 2} x={-yAxisLabelOffset}
-// transform={`translate(${-yAxisLabelOffset}, ${innerHeight / 2}) rotate(-90)`}

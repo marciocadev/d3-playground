@@ -41,7 +41,7 @@ export const ScatterPlotTimeExample = () => {
   .domain(yExtent[0] === undefined ? [0,0] : yExtent)
   .range([innerHeight, 0]);
 
-  const xAxisTickFormat = timeFormat('%a');
+  const xAxisTickFormat = timeFormat('%a %d');
   const siFormat = format('.2s');
   const yAxisTickFormat = (tickValue: number | { valueOf(): number; }) =>
     siFormat(tickValue).replace('G', 'B') + '°F';

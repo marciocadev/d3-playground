@@ -16,8 +16,8 @@ export const Marks = (props: MarksProps) => {
       props.data.map(d => 
         <rect className="marks"
           key={d.Country}
-          x={0} y={props.yScale(props.yValue(d))}
-          width={props.xScale(props.xValue(d))}
+          x={0} width={props.xScale(props.xValue(d))}
+          y={props.yScale(props.yValue(d))}
           height={props.yScale.bandwidth()}>
             <title>{props.tooltipFormat(props.xValue(d))}</title>
         </rect>

@@ -42,7 +42,7 @@ export const LineChartExample = () => {
   .range([innerHeight, 0])
   .nice();
 
-  const xAxisTickFormat = timeFormat('%a');
+  const xAxisTickFormat = timeFormat('%a %d');
   const siFormat = format('.2s');
   const yAxisTickFormat = (tickValue: number | { valueOf(): number; }) => 
     siFormat(tickValue).replace('G', 'B') + '°F';
