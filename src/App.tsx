@@ -11,23 +11,25 @@ import { WorldMap } from './components/graphs/WorldMap/WorldMap'
 import { VerticalBarChartExample } from './components/graphs/VerticalBarChartExample/VerticalBarChartExample'
 import { ScatterPlotWithMenusExample } from './components/graphs/ScatterPlotWithMenusExample/ScatterPlotWithMenusExample'
 import { ScatterPlotWithColorAndMenuExample } from './components/graphs/ScatterPlotWithColorAndMenuExample/ScatterPlotWithColorAndMenuExample'
+import { WorldmapCities } from './components/graphs/WorldMapCities/WorldMapCities'
 
 function App(): JSX.Element {
   return (
     <>
       <div data-theme="light">
-        {/* <SmileFace />
-        <MouseFolllows />
-        <LoadData />
-        <VizualizingData />
-        <VerticalBarChartExample />
-        <HorizontalBarChartExample />
-        <ScatterPlotExample />
-        <ScatterPlotTimeExample />
-        <LineChartExample />
-        <WorldMap />
-        <ScatterPlotWithMenusExample /> */}
+        {/* <SmileFace /> */}
+        {/* <MouseFolllows /> */}
+        {/* <LoadData /> */}
+        {/* <VizualizingData /> */}
+        {/* <VerticalBarChartExample /> */}
+        {/* <HorizontalBarChartExample /> */}
+        {/* <ScatterPlotExample /> */}
+        {/* <ScatterPlotTimeExample /> */}
+        {/* <LineChartExample /> */}
+        {/* <WorldMap /> */}
+        {/* <ScatterPlotWithMenusExample /> */}
         <ScatterPlotWithColorAndMenuExample />
+        {/* <WorldmapCities /> */}
       </div>
     </>
   )

@@ -1,4 +1,4 @@
-import { DSVRowArray, ScaleLinear, ScaleOrdinal } from 'd3'
+import { DSVRowArray, DSVRowString, ScaleLinear, ScaleOrdinal } from 'd3'
 import { Domain } from 'domain'
 
 interface MarksProps {
@@ -6,7 +6,7 @@ interface MarksProps {
   xScale: ScaleLinear<number, number, never>
   xValue: any
   yValue: any
-  data: DSVRowArray<any>
+  data: DSVRowArray<any> | DSVRowString<any>[]
   tooltipFormat: any
   circleRadius: number,
   colorScale: ScaleOrdinal<string, any, never>,

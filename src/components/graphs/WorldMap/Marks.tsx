@@ -13,7 +13,7 @@ export const Marks = (props: MarksProps): JSX.Element => {
 
   return (
     <>
-      <g className="world-map">
+      <g className="worldmap">
         <path className='sphere' d={path({ type: 'Sphere' })!} />
         <path className='graticule' d={path(graticule())!} />
         {

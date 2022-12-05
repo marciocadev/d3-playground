@@ -1,4 +1,4 @@
-import { extent, format, scaleLinear, scaleOrdinal } from 'd3'
+import { extent, format, scaleLinear, scaleOrdinal, DSVRowString, DSVRowArray } from 'd3'
 import { useState } from 'react'
 import { AxisBottom } from './AxisBottom'
 import { AxisLeft } from './AxisLeft'
@@ -57,6 +57,8 @@ export const ScatterPlotWithColorAndMenuExample = () => {
 
   const data = useData(url)
 
+  const [hoveredValue, setHoveredValue] = useState(null)
+
   if (data == null) {
     return <pre>Loading...</pre>
   };
@@ -78,7 +80,7 @@ export const ScatterPlotWithColorAndMenuExample = () => {
     .domain(data.map(colorValue))
     .range(['#E6842A', '#137B80', '#8E6C8A']);
 
-  console.log(colorScale.range())
+  const filteredData = data.filter(d => (hoveredValue === colorValue(d)))
 
   const siFormat = format('.2s')
   const xAxisTickFormat = (tickValue: number | { valueOf: () => number }) => siFormat(tickValue).replace('G', 'B')
@@ -86,6 +88,7 @@ export const ScatterPlotWithColorAndMenuExample = () => {
   const tickSpacing = 20
   const tickTextOffset = 15
   const circleRadius = 7
+  const fadeOpacity = 0.3
 
   return (
     <>
@@ -122,9 +125,16 @@ export const ScatterPlotWithColorAndMenuExample = () => {
               className="axis-label"
             >{colorLegendLabel}</text>
             <ColorLegend colorScale={colorScale} tickSpacing={tickSpacing}
-              tickSize={circleRadius} tickTextOffset={tickTextOffset} />
+              tickSize={circleRadius} tickTextOffset={tickTextOffset}
+              onHover={setHoveredValue} hoveredValue={hoveredValue}
+              fadeOpacity={fadeOpacity} />
           </g>
-          {<Marks data={data} xScale={xScale} yScale={yScale} circleRadius={circleRadius}
+          <g opacity={hoveredValue ? fadeOpacity : 1}>
+            {<Marks data={data} xScale={xScale} yScale={yScale} circleRadius={circleRadius}
+              yValue={yValue} xValue={xValue} tooltipFormat={xAxisTickFormat}
+              colorScale={colorScale} colorValue={colorValue} />}
+          </g>
+          {<Marks data={filteredData} xScale={xScale} yScale={yScale} circleRadius={circleRadius}
             yValue={yValue} xValue={xValue} tooltipFormat={xAxisTickFormat}
             colorScale={colorScale} colorValue={colorValue} />}
         </g>

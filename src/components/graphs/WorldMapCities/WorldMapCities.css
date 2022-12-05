@@ -1,0 +1,25 @@
+.worldmapcities {
+  & .land {
+    fill: #ececec;
+    /* stroke: #C0C0BB; */
+  }
+
+  & .interiors {
+    fill: none;
+    stroke: #d9dfe0;
+  }
+
+  & .graticule {
+    fill: none;
+    stroke: #ececec;
+  }
+
+  & circle {
+    fill: #137B80;
+    opacity: 0.3;
+  }
+
+  & .sphere {
+    fill: #fbfbfb
+  }
+}
