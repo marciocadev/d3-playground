@@ -1,8 +1,6 @@
 import { max, scaleSqrt } from 'd3';
-import { join } from 'path';
-import { useState } from 'react';
 import { Marks } from './Marks';
-import { City, useDataFromCities } from './useDataFromCities';
+import { useDataFromCities } from './useDataFromCities';
 import { useDataFromWorldMap } from './useDataFromWorldMap';
 
 export const WorldmapCities = () => {

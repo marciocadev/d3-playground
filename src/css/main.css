@@ -5,6 +5,7 @@
 
 @import '../components/graphs/WorldMap/WorldMap.css';
 @import '../components/graphs/WorldMapCities/WorldMapCities.css';
+@import '../components/graphs/WorldMapCitiesSpinning/WorldMapCitiesSpinning.css';
 
 body {
   font-family: 'Poppins', sans-serif;

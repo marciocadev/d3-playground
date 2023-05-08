@@ -1,0 +1,47 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.worldmap {
+  /* & .land {
+    fill: #137B80;
+    stroke: #C0C0BB;
+  }
+
+  & .interiors {
+    fill: none;
+    stroke: #339498;
+  }
+
+  & .graticule {
+    fill: none;
+    stroke: #DADADA;
+  }
+
+  & .sphere {
+    fill: #ECECEC
+  } */
+  & .land {
+    fill: #10243b;
+    /* stroke: #C0C0BB; */
+  }
+
+  & .interiors {
+    fill: none;
+    stroke: #d9e0dd;
+  }
+
+  & .graticule {
+    fill: none;
+    stroke: #ececec;
+  }
+
+  & circle {
+    fill: #bb4f8e;
+    opacity: 0.3;
+  }
+
+  & .sphere {
+    fill: #adeaf5
+  }
+}

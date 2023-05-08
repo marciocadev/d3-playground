@@ -11,12 +11,15 @@ import { WorldMap } from './components/graphs/WorldMap/WorldMap'
 import { VerticalBarChartExample } from './components/graphs/VerticalBarChartExample/VerticalBarChartExample'
 import { ScatterPlotWithMenusExample } from './components/graphs/ScatterPlotWithMenusExample/ScatterPlotWithMenusExample'
 import { ScatterPlotWithColorAndMenuExample } from './components/graphs/ScatterPlotWithColorAndMenuExample/ScatterPlotWithColorAndMenuExample'
-import { WorldmapCities } from './components/graphs/WorldMapCities/WorldMapCities'
+import { WorldmapCities } from './components/graphs/WorldMapCities/WorldMapCities';
+import { WorldMapMouseMove } from './components/graphs/WorldMapMouseMove/WorldMapMouseMove';
+import { WorldMapSpinning } from './components/graphs/WorldMapSpinning/WorldMapSpinning';
+import { WorldMapCitiesSpinning } from './components/graphs/WorldMapCitiesSpinning/WorldMapCitiesSpinning';
 
 function App(): JSX.Element {
   return (
     <>
-      <div data-theme="light">
+      <div data-theme="dark">
         {/* <SmileFace /> */}
         {/* <MouseFolllows /> */}
         {/* <LoadData /> */}
@@ -28,8 +31,11 @@ function App(): JSX.Element {
         {/* <LineChartExample /> */}
         {/* <WorldMap /> */}
         {/* <ScatterPlotWithMenusExample /> */}
-        <ScatterPlotWithColorAndMenuExample />
+        {/* <ScatterPlotWithColorAndMenuExample /> */}
         {/* <WorldmapCities /> */}
+        {/* <WorldMapMouseMove /> */}
+        <WorldMapSpinning />
+        {/* <WorldMapCitiesSpinning /> */}
       </div>
     </>
   )

@@ -1,12 +1,12 @@
 .worldmapcities {
   & .land {
-    fill: #ececec;
+    fill: #10243b;
     /* stroke: #C0C0BB; */
   }
 
   & .interiors {
     fill: none;
-    stroke: #d9dfe0;
+    stroke: #d9e0dd;
   }
 
   & .graticule {
@@ -15,11 +15,11 @@
   }
 
   & circle {
-    fill: #137B80;
+    fill: #bb4f8e;
     opacity: 0.3;
   }
 
   & .sphere {
-    fill: #fbfbfb
+    fill: #adeaf5
   }
 }
